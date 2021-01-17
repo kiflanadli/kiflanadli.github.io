@@ -6,9 +6,13 @@
 $primary-clr: #252934;
 $dark-clr: #07080a;
 $accent-clr: #f6f6f6;
+$secondary-clr: #c87330;
 
-$spacer: 0.7em;
+$spacer-sm: 0.7em;
+$spacer: 1em;
+$spacer-2: 1.7em;
 $spacer-md: 2.2em;
+$spacer-lg: 3em;
 
 $shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
 
@@ -28,17 +32,26 @@ body {
 }
 #comingSoon {
     width: 60%;
-    height: auto;
+    min-height: auto;
     background-color: rgba($dark-clr, 0.7);
     padding: $spacer-md;
     border-left: 3px solid $accent-clr;
     box-shadow: $shadow;
     h1 {
         margin: 0 0 $spacer;
-        font-size: 2em;
+        font-size: 3em;
     }
     p {
-        line-height: 1.7em;
+        line-height: $spacer-2;
         margin: 0;
+    }
+    a.cta-btn {
+        margin: $spacer-md 0 0;
+        background-color: $secondary-clr;
+        padding: $spacer;
+        display: inline-block;
+        text-decoration: none;
+        color: $accent-clr;
+        font-size: 0.8em;
     }
 }
