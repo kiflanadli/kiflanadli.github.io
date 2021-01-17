@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("../dir/fonts/GothamBook.ttf");
+}
+
+body {
+  margin: 0;
+  background-color: #252934;
+  color: #f6f6f6;
+  font-family: 'Gotham Book', Arial, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#comingSoon {
+  width: 60%;
+  height: auto;
+  background-color: rgba(7, 8, 10, 0.7);
+  padding: 2.2em;
+  border-left: 3px solid #f6f6f6;
+  -webkit-box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+}
+
+#comingSoon h1 {
+  margin: 0 0 0.7em;
+  font-size: 2em;
+}
+
+#comingSoon p {
+  line-height: 1.7em;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
