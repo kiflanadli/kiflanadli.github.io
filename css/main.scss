@@ -2,488 +2,56 @@
     font-family: 'Gotham Book';
     src: url('../dir/fonts/GothamBook.ttf');
 }
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$large-screen: 1500px;
-
-$primary-clr: #fff;
-$dark-clr: #252934;
-$accent-clr: rgba(#000, 0.1);
-$secondary-clr: #E1A489;
-$light-clr: #ffd1bc;
+$primary-clr: #252934;
+$dark-clr: #07080a;
+$accent-clr: #f6f6f6;
+$secondary-clr: #c87330;
 
 $spacer-sm: 0.7em;
-$spacer: 1.5rem;
-$spacer-md: 3rem;
-$spacer-lg: 9.7rem;
-
+$spacer: 1em;
+$spacer-2: 1.7em;
+$spacer-md: 2.2em;
+$spacer-lg: 3em;
 
 $shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
 
-$ff-1: 'Julius Sans One', sans-serif;
-$ff-2: 'Gotham Book', sans-serif;
-
-$opacity-1: .09;
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
-
 body {
+    margin: 0;
     background-color: $primary-clr;
-    font-family: $ff-2;
-    font-size: 14px;
-    ul {
-        list-style-type: none;
-    }
-    a {
-        text-decoration: none;
-        color: unset;
-    }    
+    color: $accent-clr;
+    font-family: 'Gotham Book', Arial, sans-serif;
 }
-header {
-    height: 3em;
+
+//coming soon page
+body {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    z-index: 100;
-    a.home-btn {
-        display: inline-block;
-        margin-left: $spacer;
-        font-family: $ff-1;
-        font-size: 1.5em;
-    }
-    nav {
-        padding: 0 $spacer;
-        color: $primary-clr;
-        background-color: $dark-clr;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        ul {
-            display: none;
-            width: 100%;
-            justify-content: space-between;
-            a {
-                display: inline-block;
-            }
-        }
-        span {
-            display: block;
-            color: $primary-clr;
-            font-size: 1.4em;
-        }
-    }
-}
-
-section {
     height: 100vh;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
-
-.title {
-    font-family: $ff-1;
-    font-size: 2em;
-}
-.cta {
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-    padding: $spacer * 0.5;
-    letter-spacing: .3em;
-    word-break: none;
-    border: 1px solid $dark-clr;
-}
-.bg-word {
-    width: 100vw;
-    font-size: 18em;
-    opacity: $opacity-1;
-    font-family: $ff-1;
-}
-
-.section-nav {
-    background-color: $dark-clr;
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 55%;
-    ul {
-        padding: $spacer*0.35 $spacer-md;
-        color: $primary-clr;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        a {
-            position: relative;
-            display: inline-block;
-            // transition: .3s;
-            &:hover {
-                transform: scale(1.4);
-            }
-        }
+#comingSoon {
+    width: 60%;
+    min-height: auto;
+    background-color: rgba($dark-clr, 0.7);
+    padding: $spacer-md;
+    border-left: 3px solid $accent-clr;
+    box-shadow: $shadow;
+    h1 {
+        margin: 0 0 $spacer;
+        font-size: 3em;
     }
-}
-
-#hero-section {
-    overflow: hidden;
-    .rect, .bg-img, .bg-word {
-        position: absolute;
+    p {
+        line-height: $spacer-2;
+        margin: 0;
     }
-    .rect {
+    a.cta-btn {
+        margin: $spacer-md 0 0;
         background-color: $secondary-clr;
-        width: $spacer;
-        height: $spacer * 2;
-        left: 0;
-        top: 3em;
-    }
-    .bg-img {
-        width: 60%;
-        height: 100vh;
-        right: 0;
-        top: 0;
-        z-index: -10;
-        background: url(../dir/img/pexels-ylanite-koppens-934062.jpg);
-        background-size: cover;
-        background-position: 65% 0;
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0; left: 0;
-        //     width: 100%; height: 100%;
-        //     backdrop-filter: blur(5px);
-    
-        // }
-    }
-    .bg-word {
-        bottom: $spacer * 3;
-        left: -.5em;
-        z-index: -2;
-    }
-    .wrapper {
-        padding-left: $spacer;
-        padding-top: 15em;
-        width: 80%;
-        .headline {
-            font-family: $ff-1;
-            font-size: 3em;
-            margin-bottom: .2em;
-        }
-        .sub-headline {
-            // font-size: 1.3em;
-            margin-bottom: 1.4em;
-        }
-        .cta-primary {
-            display: inline-block;
-            padding: $spacer * 0.5;
-            letter-spacing: .3em;
-            word-break: none;
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                top: 0; left: 0;
-                width: 50%; height: 100%;
-                border: 1px solid $secondary-clr;
-
-            }
-        }
-    }
-}
-
-#showcase {
-    padding-top: 17%;
-    .img {
-        margin: 0 $spacer;
-        width: auto;
-        background-size: cover;
-        height: 45%;
-        background: url(../dir/img/pexels-ylanite-koppens-934062.jpg);
-    }
-
-    .wrapper {
-        position: relative;
         padding: $spacer;
-        &::before {
-            content: '';
-            position: absolute;
-            background-color: $light-clr;
-            top: -4em; left: 0; bottom: 3em;
-            width: 100%; 
-            z-index: -1;
-        }
-        .sub-title {
-            position: relative;
-            left: 1em;
-            bottom: -0.2em;
-        }
-        .content {
-            margin: $spacer*0.7 0;
-            line-height: 1.5em;
-        }
-    }
-}
-
-#about {
-    padding-top: 35%;
-    .wrapper {
-        padding: 0 $spacer;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        .rect {
-            position: absolute;
-            background-color: $light-clr;
-            z-index: -1;
-            width: 55%;
-            left: 0; top: -6em; bottom: -6em;
-        }
-        .img {
-            width: 100%;
-            height: 20em;
-            background: url(../dir/img/pexels-ylanite-koppens-934062.jpg);
-        }
-        .content {
-            padding-top: $spacer;
-            position: relative;
-            p {
-                margin: $spacer*0.7 0;
-                line-height: 1.5em;
-            }
-        }
-    }
-}
-
-#contact {
-    overflow: hidden;
-    padding: 0 $spacer;
-    .bg-word, .triangle-1, .triangle-2 {
-        position: absolute;
-        z-index: -1;
-    }
-    .triangle-1, .triangle-2 {
-        width: 100%; height: 60%;
-        background-color: $light-clr;
-    }
-    .triangle-1 {
-        top: 0; right: 0;
-        clip-path: polygon(15% 0, 100% 85%, 100% 0);
-    }
-    .triangle-2 {
-        bottom: 0; left: 0;
-        clip-path: polygon(0 15%, 85% 100%, 0 100%);
-    }
-    .bg-word {
-        bottom: $spacer * 4;
-        left: -.25em;
-    }
-    .title {
-        padding-top: 35%;
-        padding-bottom: $spacer;
-    }
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: $spacer;
-        form {
-            input, textarea {
-                width: 100%;
-                margin-bottom: 1em;
-                border: 1px solid $dark-clr;
-                outline: none;
-                padding: $spacer*0.3;
-                font-family: $ff-2;
-                &::placeholder {
-                    color: rgba($dark-clr, 0.7);
-                }
-            }
-            textarea {
-                resize: none;
-            }
-        }
-        .social {
-            line-height: 1.5em;
-        }
-    }
-}
-@media screen and (min-width: $tablet-width) {
-    body {
-        font-size: 15px;
-    }
-    
-    header {
-        height: 3.1em;
-        a.home-btn {
-            margin-left: $spacer-md;
-        }
-        nav {
-            padding: 0 $spacer-md;
-        }
-    }
-    .section-nav {
-        width: 45%;
-        ul {
-            padding: $spacer*0.5 $spacer-md*2;
-        }
-    }
-    #hero-section {
-        .rect {
-            width: $spacer-md;
-            top: 3.1em;
-        }
-        .wrapper {
-            padding-left: $spacer-md;
-            width: 65%;
-        }
-    }
-    #showcase {
-        padding-top: 15em;
-        .img {
-            position: absolute;
-            right: 0; bottom: 0;
-            margin: unset;
-            width: 40%;
-            height: 60%;
-        }
-        .wrapper {
-            width: 60%;
-            padding: $spacer-md;
-            &::before {
-                top: 5em; bottom: 5em; right: -11em; left: 0;
-                width: unset;
-            }
-        }
-    }
-    #about {
-        padding-top: 20em;
-        .wrapper {
-            padding: 0 $spacer-md;
-            flex-wrap: unset;
-            gap: $spacer-md*0.7;
-            align-items: flex-end;
-            .content {
-                padding: unset;
-            }
-            .img {
-                height: 30em;
-            }
-            .rect {
-                width: 55%;
-                left: 10em; top: 6em; bottom: -6em;
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: $desktop-width) {
-    body {
-        font-size: 16px;
-    }
-    
-    header {
-        height: 3.2em;
-        a.home-btn {
-            margin-left: $spacer-lg;
-        }
-        nav {
-            padding: 0 $spacer-lg;
-            width: 55%;
-            ul{
-                display: flex;
-            }
-            span {
-                display: none;
-            }
-        }
-    }
-
-    .section-nav {
-        bottom: unset;
-        left: unset;
-        right: 0;
-        top: 30%;
-        transform: unset;
-        width: unset;
-        ul {
-            display: block;
-            padding: $spacer-md*1.4 $spacer*0.5;
-            font-size: 0.7em;
-            a {
-                display: flex;
-                align-items: center;
-                height: 3em;
-            }
-        }
-    }
-    #hero-section {
-        .rect {
-            width: $spacer-lg;
-            top: 3.2em;
-        }
-        .bg-word {
-            bottom: $spacer * .2;
-            left: -.3em;
-            font-size: 25em;
-        }
-        .wrapper {
-            padding-top: 12em;
-            padding-left: $spacer-lg;
-            width: 50%;
-        }
-    }
-    #showcase {
-        padding-top: 9em;
-        .img {
-            width: 43.5%;
-            height: 60%;
-        }
-        .wrapper {
-            width: 54%;
-            padding-left: $spacer-lg;
-            &::before {
-                top: 5em; bottom: 4.5em; right: -11em; left: 0;
-            }
-            .content {
-                margin: $spacer 0;
-            }
-        }
-    }
-    #about {
-        padding-top: 9em;
-        .wrapper {
-            padding: 0 $spacer-lg;
-            gap: $spacer-md;
-            .content {
-                padding: unset;
-            }
-            .img {
-                height: 20em;
-                width: 75%;
-            }
-            .rect {
-                width: 55%;
-                left: 15em; top: 6em; bottom: -6em;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: $large-screen) {
-    header nav {
-        width: auto;
-        ul {
-            display: inline-flex;
-            gap: $spacer-lg*0.6;
-        }
+        display: inline-block;
+        text-decoration: none;
+        color: $accent-clr;
+        font-size: 0.8em;
     }
 }
