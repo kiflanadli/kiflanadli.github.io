@@ -245,7 +245,7 @@ footer ul {
   height: 45%;
   background: url("../dir/img/Gaming Site - Preview.png");
   background-size: cover;
-  background-origin: top center;
+  background-position: top center;
   position: relative;
 }
 
