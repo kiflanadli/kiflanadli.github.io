@@ -78,13 +78,19 @@ header {
             display: block;
             color: $primary-clr;
             font-size: 1.4em;
+            cursor: pointer;
         }
     }
 }
-
+main {
+    position: relative;
+}
 section {
     height: 100vh;
     position: relative;
+}
+button {
+    font-family: $ff-2;
 }
 footer {
     display: none;
@@ -150,7 +156,35 @@ footer {
         }
     }
 }
-
+#menu {
+    display: none;
+    position: fixed;
+    z-index: 150;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba($dark-clr, 0.5);
+    .content-menu {
+        display: flex;
+        position: absolute;
+        right: 0; top: 0;
+        height: 100%;
+        background-color: $dark-clr;
+        color: $primary-clr;
+        align-items: center;
+        ul {
+            width: 100%;
+            li {
+                text-align: right;
+                padding: $spacer*0.5 $spacer ;
+            }
+        }
+        span {
+            position: absolute;
+            right: $spacer; top: $spacer * 0.5;
+            font-size: 1.4em;
+        }
+    }
+}
 #hero-section {
     overflow: hidden;
     .rect, .bg-img, .bg-word {
@@ -496,6 +530,9 @@ footer {
     .bg-word {
         font-size: 25em;
     }
+    #menu {
+        display: none;
+    }
     #hero-section {
         .rect {
             width: $spacer-lg;
@@ -553,7 +590,7 @@ footer {
         }
         .title {
             padding-top: 5.5em;
-            padding-bottom: $spacer-md;
+            // padding-bottom: $spacer-md;
         }
         .content {
             gap: $spacer-md;

@@ -80,11 +80,20 @@ header nav span {
   display: block;
   color: #fff;
   font-size: 1.4em;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
 }
 
 section {
   height: 100vh;
   position: relative;
+}
+
+button {
+  font-family: "Gotham Book", sans-serif;
 }
 
 footer {
@@ -165,6 +174,48 @@ footer ul {
 .section-nav ul a:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+#menu {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 41, 52, 0.5);
+}
+
+#menu .content-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: #252934;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu .content-menu ul {
+  width: 100%;
+}
+
+#menu .content-menu ul li {
+  text-align: right;
+  padding: 0.75rem 1.5rem;
+}
+
+#menu .content-menu span {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.75rem;
+  font-size: 1.4em;
 }
 
 #hero-section {
@@ -588,6 +639,9 @@ footer ul {
   .bg-word {
     font-size: 25em;
   }
+  #menu {
+    display: none;
+  }
   #hero-section .rect {
     width: 9.7rem;
     top: 3.2em;
@@ -649,7 +703,6 @@ footer ul {
   }
   #contact .title {
     padding-top: 5.5em;
-    padding-bottom: 3rem;
   }
   #contact .content {
     gap: 3rem;
