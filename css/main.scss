@@ -384,9 +384,9 @@ footer.main-footer {
                 height: 20em;
                 background-color: $dark-clr;
                 margin-bottom: $spacer;
-                background-image: url('../dir/img/pexels-karolina-grabowska-5398881.jpg');
+                background: url('../dir/img/pexels-karolina-grabowska-5398881.jpg');
                 background-size: cover;
-                background-position: center center;
+                background-position: 50%;
                 position: relative;
                 &::before {
                     content: '';

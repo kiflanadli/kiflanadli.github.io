@@ -694,9 +694,9 @@ footer.main-footer .social-vertical {
   height: 20em;
   background-color: #252934;
   margin-bottom: 1.5rem;
-  background-image: url("../dir/img/pexels-karolina-grabowska-5398881.jpg");
+  background: url("../dir/img/pexels-karolina-grabowska-5398881.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: 50%;
   position: relative;
 }
 
