@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-.home-btn {
-  color: #fff;
-}
-
 span[data-trigger="back-btn"] {
   position: absolute;
   left: 1.5rem;
@@ -306,6 +302,10 @@ footer.main-footer .social-vertical {
 .title {
   font-family: "Julius Sans One", sans-serif;
   font-size: 2em;
+}
+
+.text-white {
+  color: #fff;
 }
 
 .cta {

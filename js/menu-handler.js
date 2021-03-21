@@ -1,6 +1,6 @@
 var menuTrigger = document.querySelector("[data-trigger='menu']");
 var close = document.querySelector("[data-trigger='close-menu']");
-var contact = document.querySelector(".content-menu [href='index.html#contact']");
+var contact = document.querySelector(".content-menu [href='#contact']");
 
 menuTrigger.addEventListener('click', () => {
     // console.log('menu triggered successfully!');
