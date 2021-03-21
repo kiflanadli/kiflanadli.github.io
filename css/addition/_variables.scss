@@ -1,0 +1,27 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-screen: 1500px;
+
+$primary-clr: #fff;
+$dark-clr: #252934;
+$accent-clr: rgba(#000, 0.1);
+$secondary-clr: #E1A489;
+$light-clr: #ffd1bc;
+
+$spacer-sm: 0.7em;
+$spacer: 1.5rem;
+$spacer-md: 3rem;
+$spacer-lg: 9.7rem;
+
+
+$shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+
+$ff-1: 'Julius Sans One', sans-serif;
+$ff-2: 'Gotham Book', sans-serif;
+
+$opacity-1: .09;
+
+@mixin fullpage {
+    height: 100vh;
+    position: relative;
+}

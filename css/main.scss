@@ -1,36 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import 'addition/index';
+
 @font-face {
     font-family: 'Gotham Book';
     src: url('../dir/fonts/GothamBook.ttf');
 }
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$large-screen: 1500px;
-
-$primary-clr: #fff;
-$dark-clr: #252934;
-$accent-clr: rgba(#000, 0.1);
-$secondary-clr: #E1A489;
-$light-clr: #ffd1bc;
-
-$spacer-sm: 0.7em;
-$spacer: 1.5rem;
-$spacer-md: 3rem;
-$spacer-lg: 9.7rem;
-
-
-$shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
-
-$ff-1: 'Julius Sans One', sans-serif;
-$ff-2: 'Gotham Book', sans-serif;
-
-$opacity-1: .09;
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
+
 
 body {
     background-color: $primary-clr;
@@ -85,14 +66,10 @@ header {
 main {
     position: relative;
 }
-section {
-    height: 100vh;
-    position: relative;
-}
 button {
     font-family: $ff-2;
 }
-footer {
+footer.main-footer {
     display: none;
     position: fixed;
     z-index: 10;
@@ -104,7 +81,7 @@ footer {
         background-color: $secondary-clr;
         z-index: -1;
     }
-    ul {
+    .social-vertical {
         padding: $spacer * 0.2;
         line-height: 1.5em;
         position: relative;
@@ -186,6 +163,7 @@ footer {
     }
 }
 #hero-section {
+    @include fullpage;
     overflow: hidden;
     .rect, .bg-img, .bg-word {
         position: absolute;
@@ -251,6 +229,7 @@ footer {
 }
 
 #showcase {
+    @include fullpage;
     padding-top: 13%;
     .img {
         margin: 0 $spacer;
@@ -292,6 +271,7 @@ footer {
 }
 
 #about {
+    @include fullpage;
     padding-top: 35%;
     .wrapper {
         padding: 0 $spacer;
@@ -340,6 +320,7 @@ footer {
 }
 
 #contact {
+    @include fullpage;
     overflow: hidden;
     padding: 0 $spacer;
     z-index: 20;
@@ -402,7 +383,7 @@ footer {
                 margin-bottom: $spacer;
                 background: url('../dir/img/pexels-karolina-grabowska-5398881.jpg');
                 background-size: cover;
-                background-position: center;
+                background-position: center center;
                 position: relative;
                 &::before {
                     content: '';
@@ -436,7 +417,7 @@ footer {
             padding: 0 $spacer-md;
         }
     }
-    footer {
+    footer.main-footer {
         display: unset;
     }
     .section-nav {

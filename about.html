@@ -24,12 +24,13 @@
             <ul>
                 <li><a href="">My Work</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
             </ul>
             <span data-trigger="menu"><i class="fas fa-align-right"></i></span>
         </nav>
         <!-- back button -->
-        <!-- <span></span> -->
+        <span data-trigger="back-btn"><a href="index.html"><i class="fas fa-arrow-left"></i></a></span>
+
     </header>
 
     <main>
@@ -39,13 +40,68 @@
                 <ul>
                     <li><a href="">My Work</a></li>
                     <li><a href="about.html">About Me</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="index.html#contact">Contact Me</a></li>
                 </ul>
             </div>
         </div>
 
-        <section id="top"></section>
-        
+        <section id="about-top">
+            <div class="headline-page">
+                <div class="logo">
+                    <img src="dir/svg/logo-transparent-white.svg" alt="logo">
+                </div>
+                <h1>About Me</h1>
+            </div>
+            <span data-trigger="scroll-down"><p>ScrollDown</a></span>
+        </section>
+
+        <section id="about-content" class="content-page">
+            <div class="intro">
+                <h1 class="title">Who I Am</h1>
+                <div class="content-wrapper">
+                    <img src="dir/img/IMG_20200924_211247.jpeg" alt="profile pic">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nam. Porro a unde delectus labore autem vero! Libero, odio eos! Optio est tempora nemo animi.</p>
+                </div>
+            </div>
+            
+            <div class="passion">
+                <h1 class="title">passion</h1>
+                <div class="content-wrapper">
+                    <div class="wrapper">
+                        <h2>Science</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nemo.</p>
+                    </div>
+                    <div class="wrapper">
+                        <h2>Design</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nemo.</p>
+                    </div>
+                    <div class="wrapper">
+                        <h2>Coding</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nemo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-set">
+                <h1 class="title">skills</h1>
+                <div class="content-wrapper">
+                    <div class="skill">
+                        <label for="skill-1">skill</label>
+                        <progress id="skill-1" value="80" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+
+            <footer id="about-footer">
+                <span></span>
+                <ul class="social-horizontal">
+                    <li><a href="https://www.linkedin.com/in/kiflanadli/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li> <!--linkedin-->
+                    <li><a href="https://www.instagram.com/kiflanadli/" target="_blank"><i class="fab fa-instagram"></i></a></li> <!--instagram-->
+                    <li><a href="mailto:kiflanadli@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li> <!--gmail-->
+                </ul>
+            </footer>
+            
+        </section>
     </main>
     
     <!-- menu handler -->

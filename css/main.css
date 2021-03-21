@@ -1,4 +1,191 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+.home-btn {
+  color: #fff;
+}
+
+span[data-trigger="back-btn"] {
+  position: absolute;
+  left: 1.5rem;
+  top: 2em;
+  font-size: 1.5em;
+  z-index: 100;
+  color: #fff;
+}
+
+#about-top {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: url(../dir/img/dark-honeycomb.png);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-top .headline-page {
+  width: 30%;
+}
+
+#about-top .headline-page .logo {
+  margin-bottom: 1.5em;
+}
+
+#about-top .headline-page h1 {
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+}
+
+#about-top span[data-trigger="scroll-down"] {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 1.5rem;
+  z-index: 1;
+}
+
+#about-top span[data-trigger="scroll-down"] p {
+  position: absolute;
+  letter-spacing: .2em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+#about-top span[data-trigger="scroll-down"] p::before {
+  content: '';
+  position: absolute;
+  left: -4.05rem;
+  top: 0.5em;
+  background-color: #fff;
+  height: 2px;
+  width: 3.45rem;
+}
+
+.content-page {
+  min-height: 2000px;
+  position: relative;
+  z-index: 10;
+}
+
+#about-content {
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+#about-content .title {
+  position: relative;
+  float: right;
+  margin-bottom: 1.5rem;
+}
+
+#about-content .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.2em;
+  right: -1.5rem;
+  height: 2px;
+  background-color: #252934;
+}
+
+#about-content .content-wrapper {
+  clear: both;
+}
+
+#about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+  margin-top: 2.25rem;
+}
+
+#about-content .intro .content-wrapper img {
+  width: 70%;
+  margin-bottom: 1.05rem;
+}
+
+#about-content .intro .content-wrapper p {
+  line-height: 1.2em;
+  border-left: 3px solid #E1A489;
+  padding-left: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  span[data-trigger="back-btn"] {
+    left: 3rem;
+    top: 2.1em;
+  }
+  #about-top span[data-trigger="scroll-down"] {
+    bottom: 4.5rem;
+    left: 3rem;
+  }
+  #about-content {
+    padding: 3rem;
+  }
+  #about-content .title {
+    margin-bottom: 3rem;
+  }
+  #about-content .title::before {
+    right: -3rem;
+  }
+  #about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+    margin-top: 4.5rem;
+  }
+  #about-content .intro .content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 1.5rem;
+  }
+  #about-content .intro .content-wrapper img {
+    width: 45%;
+  }
+  #about-content .intro .content-wrapper p {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  span[data-trigger="back-btn"] {
+    left: 9.7rem;
+    top: 2.2em;
+  }
+  #about-top .headline-page {
+    width: 17%;
+  }
+  #about-top span[data-trigger="scroll-down"] {
+    bottom: 4.5rem;
+    left: 9.7rem;
+  }
+  #about-content {
+    padding: 9.7rem;
+    padding-top: 3rem;
+  }
+  #about-content .title {
+    margin-bottom: 3rem;
+  }
+  #about-content .title::before {
+    right: -9.7rem;
+  }
+  #about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+    margin-top: 4.5rem;
+  }
+  #about-content .intro .content-wrapper {
+    gap: 6rem;
+  }
+  #about-content .intro .content-wrapper img {
+    width: 40%;
+  }
+}
+
 @font-face {
   font-family: 'Gotham Book';
   src: url("../dir/fonts/GothamBook.ttf");
@@ -87,16 +274,11 @@ main {
   position: relative;
 }
 
-section {
-  height: 100vh;
-  position: relative;
-}
-
 button {
   font-family: "Gotham Book", sans-serif;
 }
 
-footer {
+footer.main-footer {
   display: none;
   position: fixed;
   z-index: 10;
@@ -105,7 +287,7 @@ footer {
   font-size: 2em;
 }
 
-footer .rect {
+footer.main-footer .rect {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -113,7 +295,7 @@ footer .rect {
   z-index: -1;
 }
 
-footer ul {
+footer.main-footer .social-vertical {
   padding: 0.3rem;
   line-height: 1.5em;
   position: relative;
@@ -219,6 +401,8 @@ footer ul {
 }
 
 #hero-section {
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
@@ -287,6 +471,8 @@ footer ul {
 }
 
 #showcase {
+  height: 100vh;
+  position: relative;
   padding-top: 13%;
 }
 
@@ -338,6 +524,8 @@ footer ul {
 }
 
 #about {
+  height: 100vh;
+  position: relative;
   padding-top: 35%;
 }
 
@@ -405,6 +593,8 @@ footer ul {
 }
 
 #contact {
+  height: 100vh;
+  position: relative;
   overflow: hidden;
   padding: 0 1.5rem;
   z-index: 20;
@@ -506,7 +696,7 @@ footer ul {
   margin-bottom: 1.5rem;
   background: url("../dir/img/pexels-karolina-grabowska-5398881.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   position: relative;
 }
 
@@ -543,7 +733,7 @@ footer ul {
   header nav {
     padding: 0 3rem;
   }
-  footer {
+  footer.main-footer {
     display: unset;
   }
   .section-nav {
