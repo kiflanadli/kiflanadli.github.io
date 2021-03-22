@@ -64,12 +64,6 @@ span[data-trigger="back-btn"] {
   width: 3.45rem;
 }
 
-.content-page {
-  min-height: 2000px;
-  position: relative;
-  z-index: 10;
-}
-
 #about-content {
   overflow: hidden;
   padding: 1.5rem;
@@ -110,6 +104,121 @@ span[data-trigger="back-btn"] {
   padding-left: 0.5em;
 }
 
+#about-content .passion .content-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+}
+
+#about-content .passion .content-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -1.5rem;
+  right: -1.5rem;
+  top: 2.25rem;
+  bottom: 0;
+  background-color: #E1A489;
+}
+
+#about-content .passion .content-wrapper .wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 192px;
+          flex: 1 0 192px;
+  background-color: #ffd1bc;
+  padding: 0.75rem;
+}
+
+#about-content .passion .content-wrapper .wrapper h2 {
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+  margin-bottom: 0.375rem;
+}
+
+#about-content .passion .content-wrapper .wrapper p {
+  line-height: 1.2em;
+}
+
+#about-content .skill-set .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about-content .skill-set .content-wrapper .group-skill {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5em;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill .icon-skill img {
+  width: 100%;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill .desc-skill {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 83%;
+          flex: 1 0 83%;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill .desc-skill span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill .desc-skill .backbar {
+  background-color: #ffd1bc;
+  height: 0.7em;
+}
+
+#about-content .skill-set .content-wrapper .group-skill .skill .desc-skill .backbar .progress {
+  background-color: #252934;
+  height: 100%;
+}
+
+#about-footer {
+  background-color: #252934;
+  color: #fff;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-footer ul {
+  width: 100%;
+  text-align: center;
+  line-height: 1.7em;
+}
+
 @media screen and (min-width: 768px) {
   span[data-trigger="back-btn"] {
     left: 3rem;
@@ -147,6 +256,26 @@ span[data-trigger="back-btn"] {
   #about-content .intro .content-wrapper p {
     height: 100%;
   }
+  #about-content .passion .content-wrapper {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  #about-content .passion .content-wrapper::before {
+    left: -3rem;
+    right: -3rem;
+    top: 40%;
+  }
+  #about-content .passion .content-wrapper .wrapper {
+    padding: 1.5rem;
+  }
+  #about-content .passion .content-wrapper .wrapper h2 {
+    margin-bottom: 0.5rem;
+  }
+  #about-content .skill-set .content-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -162,14 +291,15 @@ span[data-trigger="back-btn"] {
     left: 9.7rem;
   }
   #about-content {
-    padding: 9.7rem;
+    padding: 14.55rem;
     padding-top: 3rem;
+    padding-bottom: 4.5rem;
   }
   #about-content .title {
     margin-bottom: 3rem;
   }
   #about-content .title::before {
-    right: -9.7rem;
+    right: -14.55rem;
   }
   #about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
     margin-top: 4.5rem;
@@ -179,6 +309,24 @@ span[data-trigger="back-btn"] {
   }
   #about-content .intro .content-wrapper img {
     width: 40%;
+  }
+  #about-content .passion .content-wrapper {
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+  #about-content .passion .content-wrapper::before {
+    left: -14.55rem;
+    right: -14.55rem;
+    top: 40%;
+  }
+  #about-content .skill-set .content-wrapper {
+    gap: 3rem;
+  }
+  #about-footer {
+    padding: 3rem;
+  }
+  #about-footer ul {
+    line-height: 2.7em;
   }
 }
 
@@ -304,8 +452,14 @@ footer.main-footer .social-vertical {
   font-size: 2em;
 }
 
-.text-white {
+.header-content {
   color: #fff;
+}
+
+.content-page {
+  min-height: 100px;
+  position: relative;
+  z-index: 10;
 }
 
 .cta {

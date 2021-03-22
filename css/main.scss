@@ -93,9 +93,15 @@ footer.main-footer {
     font-family: $ff-1;
     font-size: 2em;
 }
-.text-white {
+.header-content {
     color: $primary-clr;
 }
+.content-page {
+    min-height: 100px;
+    position: relative;
+    z-index: 10;
+}
+
 .cta {
     text-align: center;
     width: 100%;
