@@ -481,6 +481,7 @@ footer.main-footer .social-vertical {
   font-size: 18em;
   opacity: 0.09;
   font-family: "Julius Sans One", sans-serif;
+  cursor: default;
 }
 
 .section-nav {
