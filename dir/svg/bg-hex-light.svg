@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1914.889" height="906.622" viewBox="0 0 1914.889 906.622">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dd2d4a;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <g id="bg-hex-light" transform="translate(169.158 -835.936)">
+    <path id="Polygon_17" data-name="Polygon 17" class="cls-1" d="M348,0,464,201.5,348,403H116L0,201.5,116,0Z" transform="translate(1575.415 1397.273) rotate(-155)"/>
+    <path id="Polygon_18" data-name="Polygon 18" class="cls-1" d="M348,0,464,201.5,348,403H116L0,201.5,116,0Z" transform="matrix(0.996, 0.087, -0.087, 0.996, 489.754, 1300.652)"/>
+    <path id="Polygon_16" data-name="Polygon 16" class="cls-1" d="M340.5,0,454,197.5,340.5,395h-227L0,197.5,113.5,0Z" transform="translate(292 989.012) rotate(99)"/>
+  </g>
+</svg>

@@ -89,8 +89,48 @@ span[data-trigger="back-btn"] {
   clear: both;
 }
 
-#about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+#about-content .passion, #about-content .skill-set, #about-content #about-footer {
   margin-top: 2.25rem;
+}
+
+#about-content .intro {
+  position: relative;
+}
+
+#about-content .intro .bg-img {
+  position: absolute;
+  z-index: -4;
+  left: -1.5rem;
+  top: -1.5rem;
+  bottom: 0;
+  right: -1.5rem;
+  background-image: url(../dir/img/kkl.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#about-content .intro .bg-img::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 41, 52, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+#about-content .intro .title {
+  color: #fff;
+}
+
+#about-content .intro .title::before {
+  background-color: #fff;
+}
+
+#about-content .intro .content-wrapper {
+  padding-bottom: 1.5rem;
 }
 
 #about-content .intro .content-wrapper img {
@@ -100,8 +140,9 @@ span[data-trigger="back-btn"] {
 
 #about-content .intro .content-wrapper p {
   line-height: 1.2em;
-  border-left: 3px solid #E1A489;
+  border-left: 3px solid #fff;
   padding-left: 0.5em;
+  color: #fff;
 }
 
 #about-content .passion .content-wrapper {
@@ -237,8 +278,13 @@ span[data-trigger="back-btn"] {
   #about-content .title::before {
     right: -3rem;
   }
-  #about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+  #about-content .passion, #about-content .skill-set, #about-content #about-footer {
     margin-top: 4.5rem;
+  }
+  #about-content .intro .bg-img {
+    left: -3rem;
+    top: -3rem;
+    right: -3rem;
   }
   #about-content .intro .content-wrapper {
     display: -webkit-box;
@@ -249,6 +295,7 @@ span[data-trigger="back-btn"] {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     gap: 1.5rem;
+    padding-bottom: 3rem;
   }
   #about-content .intro .content-wrapper img {
     width: 45%;
@@ -301,11 +348,24 @@ span[data-trigger="back-btn"] {
   #about-content .title::before {
     right: -14.55rem;
   }
-  #about-content .intro, #about-content .passion, #about-content .skill-set, #about-content #about-footer {
+  #about-content .passion, #about-content .skill-set, #about-content #about-footer {
     margin-top: 4.5rem;
+  }
+  #about-content .intro .bg-img {
+    left: -14.55rem;
+    top: -3rem;
+    right: -14.55rem;
+    width: 95%;
+  }
+  #about-content .intro .title {
+    color: #252934;
+  }
+  #about-content .intro .title::before {
+    background-color: #252934;
   }
   #about-content .intro .content-wrapper {
     gap: 6rem;
+    padding-bottom: 3rem;
   }
   #about-content .intro .content-wrapper img {
     width: 40%;

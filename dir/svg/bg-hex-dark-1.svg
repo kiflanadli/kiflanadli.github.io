@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1684.764" height="2039.028" viewBox="0 0 1684.764 2039.028">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00011a;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <g id="bg-hex-dark-1" transform="translate(98 -1591.807)">
+    <path id="Polygon_19" data-name="Polygon 19" class="cls-1" d="M340.5,0,454,197.5,340.5,395h-227L0,197.5,113.5,0Z" transform="translate(363.158 1867.012) rotate(99)"/>
+    <path id="Polygon_20" data-name="Polygon 20" class="cls-1" d="M340.5,0,454,197.5,340.5,395h-227L0,197.5,113.5,0Z" transform="translate(1500.137 2488.807) rotate(79)"/>
+    <path id="Polygon_21" data-name="Polygon 21" class="cls-1" d="M340.5,0,454,197.5,340.5,395h-227L0,197.5,113.5,0Z" transform="translate(303.137 3109.807) rotate(79)"/>
+    <path id="Polygon_22" data-name="Polygon 22" class="cls-1" d="M148.5,0,198,86l-49.5,86h-99L0,86,49.5,0Z" transform="translate(218.234 2571.357) rotate(79)"/>
+    <path id="Polygon_24" data-name="Polygon 24" class="cls-1" d="M148.5,0,198,86l-49.5,86h-99L0,86,49.5,0Z" transform="translate(1493.234 3127.357) rotate(79)"/>
+    <path id="Polygon_23" data-name="Polygon 23" class="cls-1" d="M340.5,0,454,197.5,340.5,395h-227L0,197.5,113.5,0Z" transform="translate(1500.137 1591.807) rotate(79)"/>
+  </g>
+</svg>

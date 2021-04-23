@@ -63,19 +63,45 @@ span[data-trigger="back-btn"] { //back button
     .content-wrapper {
         clear: both;
     }
-    .intro, .passion, .skill-set, #about-footer {
+    .passion, .skill-set, #about-footer {
         margin-top: $spacer * 1.5;
     }
     .intro {
+        position: relative;
+        .bg-img {
+            position: absolute;
+            z-index: -4;
+            left: -$spacer; top: -$spacer; bottom: 0; right: -$spacer;
+            background-image: url(../dir/img/kkl.jpg);
+            background-size: cover;
+            background-position: center;
+            &::before {
+                content:'';
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                background-color: rgba($dark-clr, 0.5);
+                backdrop-filter: blur(6px);
+            }
+            
+        }
+        .title {
+            color: $primary-clr;
+            &::before {
+                background-color: $primary-clr;
+            }
+        }
         .content-wrapper {
+            padding-bottom: $spacer;
             img {
                 width: 70%;
                 margin-bottom: $spacer * 0.7;
             }
             p {
                 line-height: 1.2em;
-                border-left: 3px solid $secondary-clr;
+                border-left: 3px solid $primary-clr;
                 padding-left: 0.5em;
+                color: $primary-clr;
             }
         }
     }
@@ -181,14 +207,18 @@ span[data-trigger="back-btn"] { //back button
                 right: -$spacer-md;
             }
         }
-        .intro, .passion, .skill-set, #about-footer {
+        .passion, .skill-set, #about-footer {
             margin-top: $spacer-md * 1.5;
         }
         .intro {
+            .bg-img {
+                left: -$spacer-md; top: -$spacer-md; right: -$spacer-md;
+            }
             .content-wrapper {
                 display: flex;
                 flex-direction: row-reverse;
                 gap: $spacer;
+                padding-bottom: $spacer-md;
                 img {
                     width: 45%;
                 }
@@ -246,12 +276,23 @@ span[data-trigger="back-btn"] { //back button
                 right: -$spacer-lg * 1.5;
             }
         }
-        .intro, .passion, .skill-set, #about-footer {
+        .passion, .skill-set, #about-footer {
             margin-top: $spacer-md * 1.5;
         }
         .intro {
+            .bg-img {
+                left: -$spacer-lg * 1.5; top: -$spacer-md; right: -$spacer-lg * 1.5;  
+                width: 95%; 
+            }
+            .title {
+                color: $dark-clr;
+                &::before {
+                    background-color: $dark-clr;
+                }
+            }
             .content-wrapper {
                 gap: $spacer-md * 2;
+                padding-bottom: $spacer-md;
                 img {
                     width: 40%;
                 }
