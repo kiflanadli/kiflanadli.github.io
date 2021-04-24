@@ -39,12 +39,13 @@
 
 #about-content {
     overflow: hidden;
-    padding: $spacer;
+    padding: $spacer-md $spacer;
     .title {
         position: relative;
         float: right;
         margin-bottom: $spacer;
         color: $dark-clr;
+        font-size: 1.3em;
         &::before {
             content: '';
             position: absolute;
@@ -57,14 +58,15 @@
         clear: both;
     }
     .passion, .skill-set, #about-footer {
-        margin-top: $spacer * 1.5;
+        margin-top: $spacer-md;
     }
     .intro {
         position: relative;
+        padding-bottom: $spacer;
         .bg-img {
             position: absolute;
             z-index: -4;
-            left: -$spacer; top: -$spacer; bottom: 0; right: -$spacer;
+            left: -$spacer; top: -$spacer-md; bottom: 0; right: -$spacer;
             background-image: url(../dir/img/kkl.jpg);
             background-size: cover;
             background-position: center top;
@@ -91,43 +93,43 @@
                 margin-bottom: $spacer * 0.7;
             }
             p {
-                line-height: 1.2em;
+                line-height: 1.5em;
                 border-left: 3px solid $primary-clr;
                 padding-left: 0.5em;
                 color: $primary-clr;
             }
         }
     }
-    .passion {
-        .content-wrapper {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            gap: $spacer / 2;
-            padding-bottom: $spacer;
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                left: -$spacer; right: -$spacer;
-                top: $spacer * 1.5; bottom: 0;
-                background-color: $secondary-clr;
-            }
-            .wrapper {
-                flex: 1 0 $tablet-width / 4;
-                background-color: $light-clr;
-                padding: $spacer / 2;
-                h2 {
-                    font-family: $ff-1;
-                    text-align: center;
-                    margin-bottom: $spacer / 4;
-                }
-                p {
-                    line-height: 1.2em;
-                }
-            }
-        }
-    }
+    // .passion {
+    //     .content-wrapper {
+    //         position: relative;
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         // gap: $spacer / 2;
+    //         // padding-bottom: $spacer;
+    //         // &::before {
+    //         //     content: '';
+    //         //     position: absolute;
+    //         //     z-index: -1;
+    //         //     left: -$spacer; right: -$spacer;
+    //         //     top: $spacer * 1.5; bottom: 0;
+    //         //     background-color: $secondary-clr;
+    //         // }
+    //         .wrapper {
+    //             flex: 1 0 $tablet-width / 4;
+    //             background-color: $light-clr;
+    //             padding: $spacer / 2;
+    //             h2 {
+    //                 font-family: $ff-1;
+    //                 text-align: center;
+    //                 margin-bottom: $spacer / 4;
+    //             }
+    //             p {
+    //                 line-height: 1.2em;
+    //             }
+    //         }
+    //     }
+    // }
     .skill-set {
         .content-wrapper {
             display: flex;
@@ -178,7 +180,6 @@
         width: 100%;
         text-align: center;
         line-height: 1.7em;
-
     }
 }
 
@@ -221,21 +222,21 @@
                 }
             }
         }
-        .passion {
-            .content-wrapper {
-                gap: $spacer-md / 2;
-                padding-bottom: $spacer-md / 2;
-                &::before {
-                    left: -$spacer-md; right: -$spacer-md; top: 40%;
-                }
-                .wrapper {
-                    padding: $spacer;
-                    h2 {
-                        margin-bottom: $spacer / 3;
-                    }
-                }
-            }
-        }
+        // .passion {
+        //     .content-wrapper {
+        //         // gap: $spacer-md / 2;
+        //         // padding-bottom: $spacer-md / 2;
+        //         // &::before {
+        //         //     left: -$spacer-md; right: -$spacer-md; top: 40%;
+        //         // }
+        //         .wrapper {
+        //             padding: $spacer;
+        //             h2 {
+        //                 margin-bottom: $spacer / 3;
+        //             }
+        //         }
+        //     }
+        // }
         .skill-set {
             .content-wrapper {
                 flex-wrap: nowrap;
@@ -287,15 +288,15 @@
                 }
             }
         }
-        .passion {
-            .content-wrapper {  
-                gap: $spacer-md;
-                padding-bottom: $spacer-md;
-                &::before {
-                    left: -$spacer-lg * 1.5; right: -$spacer-lg * 1.5; top: 40%;
-                }
-            }
-        }
+        // .passion {
+        //     .content-wrapper {  
+        //         // gap: $spacer-md;
+        //         // padding-bottom: $spacer-md;
+        //         // &::before {
+        //         //     left: -$spacer-lg * 1.5; right: -$spacer-lg * 1.5; top: 40%;
+        //         // }
+        //     }
+        // }
         .skill-set {
             .content-wrapper {
                 gap: $spacer-md;
