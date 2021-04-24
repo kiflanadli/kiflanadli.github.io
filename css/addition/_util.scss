@@ -1,0 +1,19 @@
+span[data-trigger="back-btn"] { //back button
+    position: absolute;
+    left: $spacer; top: 2em;
+    font-size: 1.5em;
+    z-index: 100;
+    color: $primary-clr;
+}
+
+@media screen and (min-width: $tablet-width) {
+    span[data-trigger="back-btn"] {
+        left: $spacer-md; top: 2.1em;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    span[data-trigger="back-btn"] {
+        left: $spacer-lg; top: 2.2em;
+    }
+}

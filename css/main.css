@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-span[data-trigger="back-btn"] {
-  position: absolute;
-  left: 1.5rem;
-  top: 2em;
-  font-size: 1.5em;
-  z-index: 100;
-  color: #fff;
-}
-
 #about-top {
   height: 100vh;
   position: relative;
@@ -73,6 +63,7 @@ span[data-trigger="back-btn"] {
   position: relative;
   float: right;
   margin-bottom: 1.5rem;
+  color: #252934;
 }
 
 #about-content .title::before {
@@ -106,7 +97,7 @@ span[data-trigger="back-btn"] {
   right: -1.5rem;
   background-image: url(../dir/img/kkl.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 #about-content .intro .bg-img::before {
@@ -252,6 +243,7 @@ span[data-trigger="back-btn"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: -1.5rem;
 }
 
 #about-footer ul {
@@ -261,13 +253,12 @@ span[data-trigger="back-btn"] {
 }
 
 @media screen and (min-width: 768px) {
-  span[data-trigger="back-btn"] {
-    left: 3rem;
-    top: 2.1em;
-  }
   #about-top span[data-trigger="scroll-down"] {
     bottom: 4.5rem;
     left: 3rem;
+  }
+  #about-footer {
+    margin: -3rem;
   }
   #about-content {
     padding: 3rem;
@@ -326,10 +317,6 @@ span[data-trigger="back-btn"] {
 }
 
 @media screen and (min-width: 1024px) {
-  span[data-trigger="back-btn"] {
-    left: 9.7rem;
-    top: 2.2em;
-  }
   #about-top .headline-page {
     width: 17%;
   }
@@ -338,9 +325,7 @@ span[data-trigger="back-btn"] {
     left: 9.7rem;
   }
   #about-content {
-    padding: 14.55rem;
-    padding-top: 3rem;
-    padding-bottom: 4.5rem;
+    padding: 3rem 14.55rem;
   }
   #about-content .title {
     margin-bottom: 3rem;
@@ -384,15 +369,142 @@ span[data-trigger="back-btn"] {
   }
   #about-footer {
     padding: 3rem;
+    margin-left: -14.55rem;
+    margin-right: -14.55rem;
   }
   #about-footer ul {
     line-height: 2.7em;
   }
 }
 
+span[data-trigger="back-btn"] {
+  position: absolute;
+  left: 1.5rem;
+  top: 2em;
+  font-size: 1.5em;
+  z-index: 100;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  span[data-trigger="back-btn"] {
+    left: 3rem;
+    top: 2.1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  span[data-trigger="back-btn"] {
+    left: 9.7rem;
+    top: 2.2em;
+  }
+}
+
+#work-preview {
+  height: 40vh;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#work-preview img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#work-content .intro-details {
+  height: 50%;
+  padding: 3rem;
+}
+
+#work-content .intro-details h2 {
+  margin-bottom: 1.2rem;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.4em;
+}
+
+#work-content .intro-details p {
+  line-height: 1.4em;
+}
+
+#work-content .showcase-design {
+  background-color: #fff;
+}
+
+#work-content .showcase-design img {
+  width: 100%;
+}
+
+#ask-project {
+  padding: 7.2rem 3rem;
+}
+
+#ask-project h2 {
+  text-align: center;
+  font-family: "Julius Sans One", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#ask-project:hover .cta-ask {
+  letter-spacing: 0.3em;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  #work-preview {
+    height: 45vh;
+  }
+  #work-content .intro-details {
+    padding: 3rem 9rem;
+  }
+  #work-content .intro-details p {
+    line-height: 1.5em;
+  }
+  #ask-project {
+    padding: 10.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #work-preview {
+    height: 50vh;
+  }
+  #work-content .intro-details {
+    padding: 6rem 19.4rem;
+  }
+  #work-content .intro-details p {
+    line-height: 1.5em;
+  }
+  #ask-project {
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @font-face {
   font-family: 'Gotham Book';
   src: url("../dir/fonts/GothamBook.ttf");
+}
+
+@font-face {
+  font-family: 'Julius Sans One';
+  src: url("../dir/fonts/JuliusSansOne-Regular.ttf");
 }
 
 * {

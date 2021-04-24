@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import 'addition/index';
 
 @font-face {
     font-family: 'Gotham Book';
     src: url('../dir/fonts/GothamBook.ttf');
+}
+
+@font-face {
+    font-family: 'Julius Sans One';
+    src: url('../dir/fonts/JuliusSansOne-Regular.ttf');
 }
 
 * {
