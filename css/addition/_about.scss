@@ -1,5 +1,6 @@
 #about-top {
     @include fullpage;
+    height: 100vh;
     overflow: hidden;
     background: url(../dir/img/dark-honeycomb.png);
     color: $primary-clr;
