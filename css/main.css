@@ -1,5 +1,4 @@
 #about-top {
-  height: 100vh;
   position: relative;
   overflow: hidden;
   background: url(../dir/img/dark-honeycomb.png);
@@ -908,7 +907,6 @@ footer.main-footer .social-vertical {
 }
 
 #hero-section {
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -984,7 +982,6 @@ footer.main-footer .social-vertical {
 }
 
 #showcase {
-  height: 100vh;
   position: relative;
   padding-top: 13%;
 }
@@ -1037,7 +1034,6 @@ footer.main-footer .social-vertical {
 }
 
 #about {
-  height: 100vh;
   position: relative;
   padding-top: 35%;
 }
@@ -1106,7 +1102,6 @@ footer.main-footer .social-vertical {
 }
 
 #contact {
-  height: 100vh;
   position: relative;
   overflow: hidden;
   padding: 0 1.5rem;

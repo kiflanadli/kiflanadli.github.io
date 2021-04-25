@@ -27,7 +27,7 @@ body, html {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 45%;
+  width: 55%;
   padding: 0.675rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
