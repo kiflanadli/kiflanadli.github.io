@@ -777,7 +777,7 @@ footer.main-footer .rect {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #E1A489;
+  background-color: rgba(225, 164, 137, 0.6);
   z-index: -1;
 }
 
@@ -883,6 +883,7 @@ footer.main-footer .social-vertical {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 45%;
 }
 
 #menu .content-menu ul {
@@ -890,8 +891,13 @@ footer.main-footer .social-vertical {
 }
 
 #menu .content-menu ul li {
+  overflow: hidden;
   text-align: right;
   padding: 0.75rem 1.5rem;
+}
+
+#menu .content-menu ul li a {
+  white-space: nowrap;
 }
 
 #menu .content-menu span {
@@ -928,6 +934,12 @@ footer.main-footer .social-vertical {
   background: url("../dir/img/pexels-ylanite-koppens-934062.jpg");
   background-size: cover;
   background-position: 65% 0;
+}
+
+@media (min-width: 1024px) {
+  #hero-section .bg-img {
+    right: 1.2em;
+  }
 }
 
 #hero-section .bg-word {
@@ -1249,9 +1261,6 @@ footer.main-footer .social-vertical {
   #hero-section .wrapper {
     padding-left: 3rem;
     width: 65%;
-  }
-  #hero-section .bg-img {
-    right: 1.2em;
   }
   #showcase {
     padding-top: 15em;

@@ -6,7 +6,9 @@ menuTrigger.addEventListener('click', () => {
     // console.log('menu triggered successfully!');
     let tl = gsap.timeline();
     tl.fromTo('#menu', {display: 'none'}, {display: 'unset'})
+    .fromTo('#menu', {backgroundColor: "transparent", duration: 0.5}, {backgroundColor: 'rgba(37, 41, 52, 0.5)'}, '-=0.5')
     .fromTo('.content-menu', {x: '100%', duration: 0.5}, {x: 0}, '-=0.5')
+    .from('.content-menu', {width: '10%', duration: 0.5, ease: "back.out(1.4)"}, '-=0.5')
 });
 
 close.addEventListener('click', closeMenu); 
@@ -17,4 +19,5 @@ function closeMenu(){
     let tl = gsap.timeline();
     tl.fromTo('.content-menu', {x: 0, duration: 0.5}, {x: '100%'})
     .fromTo('#menu', {display: 'unset'}, {display: 'none'}, '-=0.5')
+    .to('#menu', {backgroundColor: "transparent", duration: 0.5}, '-=0.5')
 }

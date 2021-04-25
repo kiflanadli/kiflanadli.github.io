@@ -1,0 +1,123 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.scroll-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.scroll-container section {
+	width: 100%;
+	height: 100%;
+}
+
+// .dots {	
+// 	z-index: 100;
+// 	list-style: none;
+// 	padding: 0;
+// 	position: absolute;	
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+
+// .dots li a {
+// 	padding: 10px;
+// 	width: 4px;
+// 	height: 5px;
+// 	display: block;
+// }
+
+// .dots li a:before {
+// 	content: '';
+// 	position: absolute;
+// 	width: 8px;
+// 	height: 8px;
+// 	background: $dark-clr;
+// 	border: 2px solid $primary-clr;
+// 	border-radius: 10px;	
+// 	transition: transform 0.3s ease, background-color 0.3s ease;
+// }
+
+// .dots li a.active:before {
+// 	content: '';
+// 	width: 14px;
+// 	height: 14px;
+// 	margin-top: -4px;
+// 	left: 7px; 
+// 	background-color: $dark-clr;
+// 	transform: scale(1.0);
+// }
+
+// .dots-right {
+// 	right: 20px;
+// }
+
+// .dots-left {
+// 	left: 10px;
+// }
+
+
+.dots {
+    background-color: $dark-clr;
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+
+	padding: $spacer*0.45 $spacer-md;
+	display: flex;
+	justify-content: space-between;
+	li {
+		width: 10px;
+		height: 10px;
+        a {
+            position: relative;
+            display: block;
+			width: 100%;
+			height: 100%;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; 
+				height: 100%; 
+				background-color: $primary-clr;
+				border-radius: 50%;
+				transition: transform 0.3s ease, background-color 0.3s ease;
+			}
+			&.active::before {
+				transform: scale(1.7);
+			}
+        }
+	}
+	@media (min-width: $tablet-width) {
+		width: 40%;
+		padding: $spacer*0.5 $spacer-md*2;
+	}
+	@media (min-width: $desktop-width) {
+		bottom: unset;
+        left: unset;
+        right: $spacer-sm;
+        top: 50%;
+		transform: translateY(-50%);
+        width: unset;
+		display: block;
+		padding: $spacer-md $spacer*0.5;
+		li {
+			display: flex;
+			align-items: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+}

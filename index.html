@@ -12,6 +12,7 @@
         
         <link rel="icon" href="dir/svg/logo-light.svg">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/full-page-scroll.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
@@ -19,39 +20,37 @@
     </head>
     <body>
         <header>
-            <a class="home-btn" href="index">Kiflan Adli</a>
+            <a class="home-btn" href="index.html">Kiflan Adli</a>
             <nav>
                 <ul>
-                    <li><a href="work/gduster">My Work</a></li>
-                    <li><a href="about">About Me</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="work/gduster.html">My Work</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="#3">Contact Me</a></li>
                 </ul>
                 <span data-trigger="menu"><i class="fas fa-align-right"></i></span>
             </nav>
         </header>
-
-        <main>
-            <div id="menu">
-                <div class="content-menu">
-                    <span data-trigger="close-menu"><i class="fas fa-arrow-right"></i></span>
-                    <ul>
-                        <li><a href="work/gduster.html">My Work</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section-nav">
+        <div id="menu">
+            <div class="content-menu">
+                <span data-trigger="close-menu"><i class="fas fa-arrow-right"></i></span>
                 <ul>
-                    <!-- <i class="fas fa-circle"></i> -->
-                    <li><a href="#hero-section"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#showcase"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#about"><i class="far fa-circle"></i></a></li>
-                    <li><a href="#contact"><i class="far fa-circle"></i></a></li>
+                    <li><a href="work/gduster.html">My Work</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="#3">Contact Me</a></li>
                 </ul>
             </div>
+        </div>
+        <!-- <div class="section-nav">
+            <ul>
+                <li><a href="#hero-section"><i class="fas fa-circle"></i></a></li>
+                <li><a href="#showcase"><i class="far fa-circle"></i></a></li>
+                <li><a href="#about"><i class="far fa-circle"></i></a></li>
+                <li><a href="#contact"><i class="far fa-circle"></i></a></li>
+            </ul>
+        </div> -->
+        <main id="main" class="scroll-container">
 
-            <section id="hero-section">
+            <section id="hero-section" class="section section1">
                 <div class="rect"></div>
                 <div class="bg-img"></div>
                 <div class="bg-word">design</div>
@@ -62,11 +61,11 @@
                         <p>Meet Kiflan Adli,</p>
                         <p>Web Designer & Front-end Developer</p>
                     </div>
-                    <div class="cta-primary"><a href="#showcase">ScrollDown <i class="fas fa-arrow-down"></i></a></div>
+                    <div class="cta-primary"><a href="#1">ScrollDown <i class="fas fa-arrow-down"></i></a></div>
                 </div>
             </section>
 
-            <section id="showcase">
+            <section id="showcase" class="section section2">
                 <div class="img"></div>
 
                 <div class="wrapper">
@@ -79,7 +78,7 @@
                 </div>
             </section>
 
-            <section id="about">
+            <section id="about" class="section section3">
                 <div class="wrapper">
                     <div class="rect"></div>
 
@@ -92,7 +91,7 @@
                 </div>
             </section>
 
-            <section id="contact">
+            <section id="contact" class="section section4">
                 <div class="triangle-1"></div>
                 <div class="triangle-2"></div>
                 <div class="bg-word">touch</div>
@@ -144,5 +143,15 @@
         <!-- menu handler -->
         <script type="text/javascript"
         src="js/menu-handler.js"></script>
+
+        <script src="js/full-page-scroll.js"></script>
+
+        <script>
+            new fullScroll({
+                mainElement: "main",
+                animateTime: 0.7,
+                animateFunction: "ease",
+            });
+        </script>
     </body>
 </html>
