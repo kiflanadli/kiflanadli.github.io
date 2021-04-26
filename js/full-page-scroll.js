@@ -159,7 +159,7 @@
 
 		this.touchEnd = function (event) {
 			mTouchEnd = parseInt(event.changedTouches[0].clientY);
-			if (mTouchEnd - mTouchStart > 50 || mTouchStart - mTouchEnd > 50) {
+			if (mTouchEnd - mTouchStart > 10 || mTouchStart - mTouchEnd > 10) {
 				if (mTouchEnd > mTouchStart) {
 					_self.defaults.currentPosition --;
 				} else {
