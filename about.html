@@ -15,7 +15,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>   
 </head>
 <body>
     <header>
@@ -60,7 +61,7 @@
                 <h1 class="title">Who I Am</h1>
                 <div class="content-wrapper">
                     <img src="dir/img/IMG_20200924_211247.jpeg" alt="profile pic">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nam. Porro a unde delectus labore autem vero! Libero, odio eos! Optio est tempora nemo animi.</p>
+                    <p>I am a fresh web designer and developer living in Bekasi, Indonesia.<br>I came from a physics background where I focused on material science. My desire to design and coding stems from my affinity for geometry and algorithm. Over the last few years, I have encouraged myself to delve into design and coding. With the same principle on science, I want to promote innovation as a designer and developer.</p>
                 </div>
                 <div class="bg-img"></div>
             </div>
@@ -105,15 +106,15 @@
                     <div class="content">
                         <section>
                             <h2>Science</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consectetur explicabo placeat ipsa odit voluptate! Odit laudantium eaque eveniet perferendis ipsum soluta ratione iusto quisquam.</p>
+                            <p>Science is one of the most important channels of knowledge. Well-developed science is just like magic, it can open up a lot of possibilities. I love science since I was little, and I want to promote innovation as a designer and developer in the same way a researcher is with science.</p>
                         </section>
                         <section>
                             <h2>Design</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, accusamus culpa. Aut eligendi obcaecati deserunt quam facilis, quia unde et accusamus praesentium quasi, dolor fugiat?</p>
+                            <p>There is a phrase "One should be in harmony with his or her environment, and things should be made to last rather than be replaced". If a product or service is a solution to a problem, then it is the role of design to make it in harmony with the user and make it last.</p>
                         </section>
                         <section>
                             <h2>Coding</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aut quidem recusandae aliquam quos eveniet nulla id, nostrum maxime voluptates dicta aspernatur nam debitis doloremque eum obcaecati facilis, rem nesciunt accusantium. Voluptatem facere eligendi repellat culpa. Labore, nemo nesciunt eveniet rerum expedita aliquid dolore, neque quasi sapiente cumque sit inventore!</p>
+                            <p>Programming is not just about writing code, it is a systematic way of reasoning. Every step is a formula to construct marvelous magic. It is wondrous to see the beauty of the design made by detailed calculations and codes.</p>
                         </section>
                     </div>
                 </div>
@@ -332,5 +333,18 @@
     <!-- menu handler -->
     <script type="text/javascript"
     src="js/menu-handler.js"></script>
+    
+    <!-- animation -->
+    <script>
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'div.bg-img',
+                start: 'bottom top',
+                end: 'bottom top',
+                toggleActions: 'play none reset none'
+            }
+        })
+        tl.to('a.home-btn', {color: '#000', duration: 0.5})
+    </script>
 </body>
 </html>
