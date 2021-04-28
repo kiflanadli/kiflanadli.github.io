@@ -12,9 +12,9 @@ menuTrigger.addEventListener('click', () => {
 });
 
 close.addEventListener('click', closeMenu); 
-for (var i = 0; i < link.length; i++) {
-    link[i].addEventListener('click', closeMenu); 
-}
+link.forEach(item => {
+    item.addEventListener('click', closeMenu);
+})
 
 function closeMenu(){
     // console.log('close triggered successfully!');
