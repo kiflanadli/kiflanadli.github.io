@@ -1,6 +1,6 @@
 var menuTrigger = document.querySelector("[data-trigger='menu']");
 var close = document.querySelector("[data-trigger='close-menu']");
-var contact = document.querySelector(".content-menu [href='#3']");
+var link = document.querySelectorAll(".content-menu a");
 
 menuTrigger.addEventListener('click', () => {
     // console.log('menu triggered successfully!');
@@ -12,7 +12,9 @@ menuTrigger.addEventListener('click', () => {
 });
 
 close.addEventListener('click', closeMenu); 
-contact.addEventListener('click', closeMenu); 
+for (var i = 0; i < link.length; i++) {
+    link[i].addEventListener('click', closeMenu); 
+}
 
 function closeMenu(){
     // console.log('close triggered successfully!');
