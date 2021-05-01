@@ -203,3 +203,38 @@ $content-selector: "~ .content > section";
     }
 
 }
+
+// page transitions
+
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 200vh;
+    pointer-events: none;
+    background-color: #FFF6ED;
+    z-index: 160;
+    visibility: hidden;
+    opacity: 0;
+
+    // height: 100vh;
+    // background-color: $dark-clr;
+    // background-color: rgba(255, 246, 237, 0.5);
+    // backdrop-filter: blur(10px);
+}
+
+.is-transitioning {
+    pointer-events: none;
+    cursor: progress;
+}
+
+// page cover
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: $dark-clr;
+    z-index: 170;
+    visibility: visible;
+    opacity: 1;
+}

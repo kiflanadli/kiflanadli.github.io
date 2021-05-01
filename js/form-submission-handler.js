@@ -78,6 +78,7 @@
       }
     } else {
       disableAllButtons(form);
+      document.documentElement.style.cursor = "progress";
       var url = form.action;
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
@@ -93,6 +94,7 @@
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
+            document.documentElement.style.cursor = "auto";
           }
           return;
       };
@@ -112,7 +114,8 @@
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
   };
-  document.addEventListener("DOMContentLoaded", loaded, false);
+  // document.addEventListener("DOMContentLoaded", loaded, false);
+  loaded();
 
   function disableAllButtons(form) {
     var buttons = form.querySelectorAll("button");

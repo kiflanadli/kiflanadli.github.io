@@ -1,7 +1,7 @@
 /**
  * Full page
  */
-(function () {
+
 	'use strict';
 	
 	/**
@@ -247,4 +247,3 @@
 		return this;
 	};
 	window.fullScroll = fullScroll;
-})();

@@ -14,14 +14,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>   
 </head>
-<body>
+<body data-barba="wrapper">
+    <div class="cover"></div>
     <header>
         <a class="home-btn header-content" href="../index.html">Kiflan Adli</a>
         <nav>
             <ul>
-                <li><a href="gduster.html">My Work</a></li>
+                <li><a href="../work/gduster.html">My Work</a></li>
                 <li><a href="../about.html">About Me</a></li>
                 <li><a href="../index.html#3">Contact Me</a></li>
             </ul>
@@ -31,19 +34,19 @@
         <!-- <span data-trigger="back-btn"><a href="../index.html"><i class="fas fa-arrow-left"></i></a></span> -->
 
     </header>
-
-    <main>
-        <div id="menu">
-            <div class="content-menu">
-                <span data-trigger="close-menu"><i class="fas fa-arrow-right"></i></span>
-                <ul>
-                    <li><a href="gduster.html">My Work</a></li>
-                    <li><a href="../about.html">About Me</a></li>
-                    <li><a href="../index.html#3">Contact Me</a></li>
-                </ul>
-            </div>
+    <div id="menu">
+        <div class="content-menu">
+            <span data-trigger="close-menu"><i class="fas fa-arrow-right"></i></span>
+            <ul>
+                <li><a href="../work/gduster.html">My Work</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../index.html#3">Contact Me</a></li>
+            </ul>
         </div>
+    </div>
+    <div class="loader"></div>
 
+    <main data-barba="container" data-barba-namespace="work">
         <div id="work-preview">
             <img src="../dir/img/preview.png" alt="preview">
         </div>
@@ -63,7 +66,10 @@
             </section>
         </a>
     </main>
+    <!-- page transitions -->
+    <script src="../js/animation.js" defer></script>
 
+    <!-- menu handler -->    
     <script type="text/javascript"
     src="../js/menu-handler.js"></script>
 </body>
