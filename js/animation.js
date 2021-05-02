@@ -282,7 +282,3 @@ window.addEventListener('load', function() {
     setTimeout(removeCover, 1000);
     init();
 });
-
-window.addEventListener('resize', function() {
-    location.reload();
-});
