@@ -147,25 +147,36 @@ function init(){
         head.appendChild(link);
 
         // create fullpageScroll and fullpageTrigger js
-        let createFPS = new Promise(function(success, error) {
-            let theScript = document.createElement('script');
-            theScript.setAttribute('id', "fullpageScroll");
-            theScript.setAttribute('src', "../js/full-page-scroll.js");
-            theScript.setAttribute('type', "text/javascript");
-            setTimeout(() => {
-                success(head.appendChild( theScript ));
-            }, 1100);
-        }); 
-        function createFPT() {
-            let theScript2 = document.createElement('script');
-            theScript2.setAttribute('id', "fullpageTrigger");
-            theScript2.setAttribute('src', "../js/full-page-trigger.js");
-            theScript2.setAttribute('type', "text/javascript");
+        
+        let checkScript = document.getElementById("fullpageScroll");
+        if (!checkScript) {
+            let createFPS = new Promise(function(success, error) {
+                let theScript = document.createElement('script');
+                theScript.setAttribute('id', "fullpageScroll");
+                theScript.setAttribute('src', "../js/full-page-scroll.js");
+                theScript.setAttribute('type', "text/javascript");
+                setTimeout(() => {
+                    success(body.appendChild( theScript ));
+                }, 1100);
+            }); 
+
+            function createFPT() {
+                let theScript2 = document.createElement('script');
+                theScript2.setAttribute('id', "fullpageTrigger");
+                theScript2.setAttribute('src', "../js/full-page-trigger.js");
+                theScript2.setAttribute('type', "text/javascript");
+                let ss = document.getElementById('fullpageScroll');
+                if (ss) {
+                    console.log('fullpageScroll loaded');
+                } else {
+                    location.reload();
+                }
+                body.appendChild( theScript2 );
+            }
             
-            head.appendChild( theScript2 );
-            
+            createFPS.then(createFPT);
         }
-        createFPS.then(createFPT);
+        
 
         // create form to google using ajax
         let scriptForm = document.createElement('script');
