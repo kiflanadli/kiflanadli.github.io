@@ -168,10 +168,10 @@ function init(){
                 let ss = document.getElementById('fullpageScroll');
                 if (ss) {
                     console.log('fullpageScroll loaded');
+                    body.appendChild( theScript2 );
                 } else {
                     location.reload();
                 }
-                body.appendChild( theScript2 );
             }
 
             createFPS.then(createFPT);
