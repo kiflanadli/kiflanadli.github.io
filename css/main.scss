@@ -256,7 +256,7 @@ footer.main-footer {
 
 #showcase {
     @include fullpage;
-    padding-top: 13%;
+    padding-top: 20%;
     .img {
         margin: 0 $spacer;
         width: auto;
@@ -298,7 +298,7 @@ footer.main-footer {
 
 #about {
     @include fullpage;
-    padding-top: 35%;
+    padding-top: 30%;
     .wrapper {
         padding: 0 $spacer;
         position: relative;
@@ -310,7 +310,7 @@ footer.main-footer {
             background-color: $light-clr;
             z-index: -1;
             width: 55%;
-            left: 0; top: -6em; bottom: -3em;
+            left: 0; top: -3em; bottom: -3em;
         }
         .img {
             width: 100%;

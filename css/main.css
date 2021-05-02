@@ -1015,7 +1015,7 @@ footer.main-footer .social-vertical {
 
 #showcase {
   position: relative;
-  padding-top: 13%;
+  padding-top: 20%;
 }
 
 #showcase .img {
@@ -1067,7 +1067,7 @@ footer.main-footer .social-vertical {
 
 #about {
   position: relative;
-  padding-top: 35%;
+  padding-top: 30%;
 }
 
 #about .wrapper {
@@ -1089,7 +1089,7 @@ footer.main-footer .social-vertical {
   z-index: -1;
   width: 55%;
   left: 0;
-  top: -6em;
+  top: -3em;
   bottom: -3em;
 }
 

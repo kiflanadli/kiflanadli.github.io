@@ -173,7 +173,7 @@ function init(){
                 }
                 body.appendChild( theScript2 );
             }
-            
+
             createFPS.then(createFPT);
         }
         
@@ -278,7 +278,11 @@ function init(){
 
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
     setTimeout(removeCover, 1000);
     init();
+});
+
+window.addEventListener('resize', function() {
+    location.reload();
 });
