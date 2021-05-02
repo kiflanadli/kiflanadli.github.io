@@ -715,6 +715,10 @@ span[data-trigger="back-btn"] {
           user-select: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   font-family: "Gotham Book", sans-serif;

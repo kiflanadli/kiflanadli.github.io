@@ -252,7 +252,7 @@ function init(){
             enter() {
                 loaderAway();
             },
-            beforeLeave() {
+            before() {
                 // scroll to the top of the page
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
