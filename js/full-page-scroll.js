@@ -295,13 +295,13 @@
 				}, {
 					xPercent: 0,
 					stagger: 0.1
-				}, '-=1')
+				}, '-=0.4')
 
 				.fromTo(bgWord[0], {
-					xPercent: -200
+					xPercent: -250
 				}, {
 					xPercent: 0
-				}, '-=1')
+				}, '-=0.8')
 
 				// .fromTo(wrapper[0].children[2], {
 				// 	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)"
@@ -331,14 +331,14 @@
 					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
 				}, {
 					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-				}, '-=0.4')
+				}, '-=0.2')
 
 				.fromTo(wrapper[1].children[1].children, {
 					xPercent: -150
 				}, {
 					xPercent: 0,
 					stagger: 0.1
-				}, '-=1')
+				}, '-=0.5')
 
 			} else if (position == 2) {
 				pt.fromTo(img[1], {
@@ -355,14 +355,14 @@
 					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
 				}, {
 					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-				}, '-=0.4')
+				}, '-=0.2')
 
 				.fromTo(wrapper[2].children[2].children, {
 					xPercent: -150
 				}, {
 					xPercent: 0,
 					stagger: 0.1
-				}, '-=1')
+				}, '-=0.5')
 
 			} else if (position == 3) {
 				pt.fromTo(bounding[2].children[1].children[0], {
