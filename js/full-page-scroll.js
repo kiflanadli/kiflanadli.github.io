@@ -314,8 +314,8 @@
 					yPercent: 200
 				}, {
 					yPercent: 0,
-					duration: 0.5
-				}, '-=0.5')
+					duration: 0.8
+				}, '-=1')
 
 			} else if (position == 1) {
 				pt.fromTo(img[0], {
@@ -378,37 +378,40 @@
 				.fromTo(bounding[1].children, {
 					xPercent: -110
 				}, {
-					xPercent: 0
-				}, '-=1')
+					xPercent: 0,
+					duration: 0.7
+				}, '-=0.7')
 				.fromTo(bounding[2].children[0], {
 					xPercent: -110
 				}, {
-					xPercent: 0
-				}, '-=0.5')
-
-				.fromTo(bounding[3].children, {
-					xPercent: -150
-				}, {
 					xPercent: 0,
-					stagger: 0.1
-				}, '-=0.8')
+					duration: 0.7
+				}, '-=0.7')
 
 				.fromTo(rect[3], {
 					clipPath: "polygon(100% 0%, 185% 85%, 185% 0%)"
 				}, {
 					clipPath: "polygon(15% 0%, 100% 85%, 100% 0%)"
-				}, '-=0.3')
+				}, '-=0.2')
 				.fromTo(rect[4], {
 					clipPath: "polygon(-85% 15%, 0% 100%, -85% 100%)"
 				}, {
 					clipPath: "polygon(0% 15%, 85% 100%, 0% 100%)"
 				}, '-=1')
 
+				.fromTo(bounding[3].children, {
+					xPercent: -150
+				}, {
+					xPercent: 0,
+					stagger: 0.1
+				}, '-=0.5')
+
+				
 				.fromTo(bgWord[1], {
 					xPercent: -250
 				}, {
 					xPercent: 0
-				}, '-=0.6')
+				}, '-=1')
 
 			}
 		}
