@@ -295,7 +295,7 @@
 				}, {
 					xPercent: 0,
 					stagger: 0.1
-				}, '-=0.4')
+				}, '-=0.2')
 
 				.fromTo(bgWord[0], {
 					xPercent: -250
