@@ -278,17 +278,18 @@
 				pt.fromTo(rect[0], {
 					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
 				}, {
-					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+					duration: 0.7
 				})
-				
 				.fromTo(bgImg[0], {
 					transformOrigin: 'right',
 					scale: 0.8,
 					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
 				}, {
 					scale: 1,
-					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)"
-				}, '-=1')
+					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+					duration: 0.7
+				}, '-=0.7')
 
 				.fromTo(wrapper[0].children, {
 					xPercent: -100,
@@ -301,7 +302,7 @@
 					xPercent: -250
 				}, {
 					xPercent: 0
-				}, '-=0.8')
+				}, '-=0.5')
 
 				// .fromTo(wrapper[0].children[2], {
 				// 	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)"
@@ -314,7 +315,7 @@
 				}, {
 					yPercent: 0,
 					duration: 0.5
-				}, '-=0.2')
+				}, '-=0.5')
 
 			} else if (position == 1) {
 				pt.fromTo(img[0], {
@@ -374,30 +375,29 @@
 					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
 					duration: 0.7
 				})
-				
 				.fromTo(bounding[1].children, {
 					xPercent: -110
 				}, {
 					xPercent: 0
 				}, '-=1')
-				
 				.fromTo(bounding[2].children[0], {
 					xPercent: -110
 				}, {
 					xPercent: 0
 				}, '-=0.5')
+
 				.fromTo(bounding[3].children, {
 					xPercent: -150
 				}, {
 					xPercent: 0,
 					stagger: 0.1
-				}, '-=1')
+				}, '-=0.8')
 
 				.fromTo(rect[3], {
 					clipPath: "polygon(100% 0%, 185% 85%, 185% 0%)"
 				}, {
 					clipPath: "polygon(15% 0%, 100% 85%, 100% 0%)"
-				}, '-=0.7')
+				}, '-=0.3')
 				.fromTo(rect[4], {
 					clipPath: "polygon(-85% 15%, 0% 100%, -85% 100%)"
 				}, {
@@ -408,7 +408,7 @@
 					xPercent: -250
 				}, {
 					xPercent: 0
-				}, '-=0.7')
+				}, '-=0.6')
 
 			}
 		}
