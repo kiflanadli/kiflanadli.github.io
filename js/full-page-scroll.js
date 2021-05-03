@@ -180,7 +180,18 @@
 					} else {
 						_self.defaults.currentPosition = anchor;
 						_self.animateScroll();
-					}					
+						_self.presentation(anchor);
+					}
+					
+					// if (anchor == 0) {
+					// 	console.log(`got section ${location.hash}`)
+					// } else if (anchor == 1) {
+					// 	console.log(`got section ${location.hash}`)
+					// } else if (anchor == 2) {
+					// 	console.log(`got section ${location.hash}`)
+					// } else if (anchor == 3) {
+					// 	console.log(`got section ${location.hash}`)
+					// }
 				}				
 			}
 		};
@@ -200,7 +211,7 @@
 
 			setTimeout(function(){
 				_self.addEvents();
-			}, 600);
+			}, 1000);
 		};
 
 		this.animateScroll = function () {
@@ -227,6 +238,11 @@
 
 		this.changeCurrentPosition = function (position) {
 			if (position !== "") {
+				if (position < 0) {
+					position = 0;
+				} else if (position > _self.defaults.maxPosition) {
+					position = _self.defaults.maxPosition;
+				}
 				_self.defaults.currentPosition = position;
 				location.hash = _self.defaults.currentPosition;
 			}
@@ -243,6 +259,159 @@
 				return currentClass.replace(newClass, '');
 			}
 		};
+
+		this.presentation = function (position) {
+			const rect = document.querySelectorAll('.rect');
+			const bgImg = document.querySelectorAll('.bg-img');
+			const img = document.querySelectorAll('.img');
+			const wrapper = document.querySelectorAll('.wrapper');
+			const bgWord = document.querySelectorAll('.bg-word');
+			const bounding = document.querySelectorAll('.bounding');
+			const pt = gsap.timeline({
+				defaults: {
+					duration: 1, 
+					ease: Power1.easeOut
+				} 
+			}).delay(0.5);
+
+			if (position == 0) {
+				pt.fromTo(rect[0], {
+					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+				}, {
+					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+				})
+				
+				.fromTo(bgImg[0], {
+					transformOrigin: 'right',
+					scale: 0.8,
+					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
+				}, {
+					scale: 1,
+					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)"
+				}, '-=1')
+
+				.fromTo(wrapper[0].children, {
+					xPercent: -100,
+				}, {
+					xPercent: 0,
+					stagger: 0.1
+				}, '-=1')
+
+				.fromTo(bgWord[0], {
+					xPercent: -200
+				}, {
+					xPercent: 0
+				}, '-=1')
+
+				// .fromTo(wrapper[0].children[2], {
+				// 	clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)"
+				// }, {
+				// 	clipPath: "polygon(0% 0%, 110% 0%, 110% 110%, 0% 110%)",
+				// 	duration: 0.3
+				// }, '-=0.1')
+				.fromTo(wrapper[0].children[2].children, {
+					yPercent: 200
+				}, {
+					yPercent: 0,
+					duration: 0.5
+				}, '-=0.2')
+
+			} else if (position == 1) {
+				pt.fromTo(img[0], {
+					transformOrigin: 'right',
+					scale: 0.8,
+					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
+				}, {
+					scale: 1,
+					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+					duration: 0.7
+				})
+
+				.fromTo(rect[1], {
+					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+				}, {
+					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+				}, '-=0.4')
+
+				.fromTo(wrapper[1].children[1].children, {
+					xPercent: -150
+				}, {
+					xPercent: 0,
+					stagger: 0.1
+				}, '-=1')
+
+			} else if (position == 2) {
+				pt.fromTo(img[1], {
+					transformOrigin: 'right',
+					scale: 0.8,
+					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
+				}, {
+					scale: 1,
+					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+					duration: 0.7
+				})
+
+				.fromTo(rect[2], {
+					clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+				}, {
+					clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+				}, '-=0.4')
+
+				.fromTo(wrapper[2].children[2].children, {
+					xPercent: -150
+				}, {
+					xPercent: 0,
+					stagger: 0.1
+				}, '-=1')
+
+			} else if (position == 3) {
+				pt.fromTo(bounding[2].children[1].children[0], {
+					transformOrigin: 'right',
+					scale: 0.8,
+					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
+				}, {
+					scale: 1,
+					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+					duration: 0.7
+				})
+				
+				.fromTo(bounding[1].children, {
+					xPercent: -110
+				}, {
+					xPercent: 0
+				}, '-=1')
+				
+				.fromTo(bounding[2].children[0], {
+					xPercent: -110
+				}, {
+					xPercent: 0
+				}, '-=0.5')
+				.fromTo(bounding[3].children, {
+					xPercent: -150
+				}, {
+					xPercent: 0,
+					stagger: 0.1
+				}, '-=1')
+
+				.fromTo(rect[3], {
+					clipPath: "polygon(100% 0%, 185% 85%, 185% 0%)"
+				}, {
+					clipPath: "polygon(15% 0%, 100% 85%, 100% 0%)"
+				}, '-=0.7')
+				.fromTo(rect[4], {
+					clipPath: "polygon(-85% 15%, 0% 100%, -85% 100%)"
+				}, {
+					clipPath: "polygon(0% 15%, 85% 100%, 0% 100%)"
+				}, '-=1')
+
+				.fromTo(bgWord[1], {
+					xPercent: -250
+				}, {
+					xPercent: 0
+				}, '-=0.7')
+
+			}
+		}
 
 		return this;
 	};

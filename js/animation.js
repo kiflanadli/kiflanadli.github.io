@@ -157,7 +157,7 @@ function init(){
                 theScript.setAttribute('type', "text/javascript");
                 setTimeout(() => {
                     success(body.appendChild( theScript ));
-                }, 1100);
+                }, 10);
             }); 
 
             function createFPT() {
@@ -250,7 +250,10 @@ function init(){
         
             },
             enter() {
-                loaderAway();
+                setTimeout(() => {
+                    loaderAway();
+                }, 200);
+                    
             },
             before() {
                 // scroll to the top of the page
