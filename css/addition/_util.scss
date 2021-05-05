@@ -148,7 +148,7 @@ $content-selector: "~ .content > section";
             h3 {
                 display: block;
                 margin-bottom: $spacer;
-                font-size: 1.5em;
+                // font-size: 1.5em;
                 &::after {
                     content: "";
                     position: relative;

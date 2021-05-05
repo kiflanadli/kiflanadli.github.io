@@ -67,7 +67,7 @@
   float: right;
   margin-bottom: 1.5rem;
   color: #252934;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 #about-content .title::before {
@@ -153,7 +153,6 @@
   margin-bottom: 1.5rem;
   display: block;
   font-family: "Julius Sans One", sans-serif;
-  font-size: 1.5em;
 }
 
 #about-content .skill-set .content-wrapper .group-skill h3::after {
@@ -520,7 +519,6 @@ span[data-trigger="back-btn"] {
 .tabs .content section h3 {
   display: block;
   margin-bottom: 1.5rem;
-  font-size: 1.5em;
 }
 
 .tabs .content section h3::after {
