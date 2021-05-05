@@ -18,7 +18,7 @@ window.aboutJs = (function () {
         gsap.from(el, {
             transformOrigin: 'left',
             scaleX: 0, 
-            duration: 0.6, 
+            duration: 1, 
             scrollTrigger: {
                 trigger: el
             }
