@@ -149,13 +149,14 @@
           flex: 1 1 48%;
 }
 
-#about-content .skill-set .content-wrapper .group-skill h2 {
+#about-content .skill-set .content-wrapper .group-skill h3 {
   margin-bottom: 1.5rem;
   display: block;
   font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5em;
 }
 
-#about-content .skill-set .content-wrapper .group-skill h2::after {
+#about-content .skill-set .content-wrapper .group-skill h3::after {
   content: '';
   position: relative;
   display: block;
@@ -167,7 +168,7 @@
 }
 
 @media (min-width: 768px) {
-  #about-content .skill-set .content-wrapper .group-skill h2 {
+  #about-content .skill-set .content-wrapper .group-skill h3 {
     display: none;
   }
 }
@@ -411,7 +412,7 @@ span[data-trigger="back-btn"] {
   display: block;
 }
 
-.tabs .content section h2,
+.tabs .content section h3,
 .tabs ul li label {
   font-family: "Julius Sans One", sans-serif;
 }
@@ -516,12 +517,13 @@ span[data-trigger="back-btn"] {
   line-height: 1.3em;
 }
 
-.tabs .content section h2 {
+.tabs .content section h3 {
   display: block;
   margin-bottom: 1.5rem;
+  font-size: 1.5em;
 }
 
-.tabs .content section h2::after {
+.tabs .content section h3::after {
   content: "";
   position: relative;
   display: block;
@@ -533,7 +535,7 @@ span[data-trigger="back-btn"] {
 }
 
 @media (min-width: 768px) {
-  .tabs .content section h2 {
+  .tabs .content section h3 {
     display: none;
   }
 }
@@ -1195,6 +1197,7 @@ footer.main-footer .social-vertical {
 }
 
 #showcase .wrapper .sub-title {
+  display: block;
   position: relative;
   left: 1em;
   bottom: -0.2em;

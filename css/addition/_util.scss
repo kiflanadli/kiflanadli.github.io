@@ -63,7 +63,7 @@ $content-selector: "~ .content > section";
         }
     }
 
-    .content section h2,
+    .content section h3,
     ul li label {
         font-family: $ff-1;
     }
@@ -145,9 +145,10 @@ $content-selector: "~ .content > section";
                 iteration-count: 1;
             }
             line-height: 1.3em;
-            h2 {
+            h3 {
                 display: block;
                 margin-bottom: $spacer;
+                font-size: 1.5em;
                 &::after {
                     content: "";
                     position: relative;

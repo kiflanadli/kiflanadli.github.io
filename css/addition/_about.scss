@@ -143,10 +143,11 @@
             justify-content: space-between;
             .group-skill {
                 flex: 1 1 48%;
-                h2 {
+                h3 {
                     margin-bottom: $spacer;
                     display: block;
                     font-family: $ff-1;
+                    font-size: 1.5em;
                     &::after {
                         content: '';
                         position: relative;
