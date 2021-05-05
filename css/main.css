@@ -3,6 +3,8 @@
   height: 100vh;
   overflow: hidden;
   background: url(../dir/img/dark-honeycomb.png);
+  background-size: 100%;
+  background-position: center;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,7 +135,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -145,6 +147,29 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 48%;
           flex: 1 1 48%;
+}
+
+#about-content .skill-set .content-wrapper .group-skill h2 {
+  margin-bottom: 1.5rem;
+  display: block;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+#about-content .skill-set .content-wrapper .group-skill h2::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #252934;
+  left: 2px;
+  top: 0.3em;
+}
+
+@media (min-width: 768px) {
+  #about-content .skill-set .content-wrapper .group-skill h2 {
+    display: none;
+  }
 }
 
 #about-content .skill-set .content-wrapper .group-skill .skill {

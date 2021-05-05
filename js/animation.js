@@ -199,27 +199,37 @@ function init(){
         
     }
     
-    // function aboutEnter() {
-    //     // let go = gsap.timeline();
-    //     // go.to('a.home-btn', {color: '#fff'})
-    //     let tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: 'div.bg-img',
-    //             start: 'bottom top',
-    //             end: 'bottom top',
-    //             toggleActions: 'play none reset none'
-    //         }
-    //     })
-    //     tl.to('a.home-btn', {color: '#000', duration: 0.5})
-    // }
+    function aboutEnter() {
+        let head = document.getElementsByTagName('head')[0];
+        let body = document.getElementsByTagName('body')[0];
 
-    // function aboutLeave() {
-    //     let title = document.querySelectorAll('a.home-btn');
-    //     title[0].classList.remove('header-content');
+        // // let go = gsap.timeline();
+        // // go.to('a.home-btn', {color: '#fff'})
+        // let tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: 'div.bg-img',
+        //         start: 'bottom top',
+        //         end: 'bottom top',
+        //         toggleActions: 'play none reset none'
+        //     }
+        // })
+        // tl.to('a.home-btn', {color: '#000', duration: 0.5})
+        let dT = document.getElementById('dT');
+        if (!dT) {
+            let dTscript = document.createElement('script');
+            dTscript.setAttribute('id', "dT");
+            dTscript.setAttribute('src', "../js/dT.js");
+            dTscript.setAttribute('type', "text/javascript");
+            body.appendChild( dTscript );
+        }
+    }
 
-    //     let dT = document.getElementById("dT");
-    //     dT.parentNode.removeChild(dT);
-    // }
+    function aboutLeave() {
+        let removeDT = document.getElementById("dT");
+        if (removeDT) {
+            removeDT.parentNode.removeChild(removeDT);
+        }
+    }
 
     // function aboutEnter() {
     //     let go = gsap.timeline();
@@ -268,14 +278,14 @@ function init(){
             beforeEnter() {
                 homeEnter();
             }
-        // }, {
-        //     namespace: 'about',
-        //     beforeEnter() {
-        //         aboutEnter();
-        //     },
-        //     beforeLeave() {
-        //         aboutLeave();
-        //     }
+        }, {
+            namespace: 'about',
+            beforeEnter() {
+                aboutEnter();
+            },
+            beforeLeave() {
+                aboutLeave();
+            }
         }]
     })
 

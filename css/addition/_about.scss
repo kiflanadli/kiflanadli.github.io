@@ -3,6 +3,8 @@
     height: 100vh;
     overflow: hidden;
     background: url(../dir/img/dark-honeycomb.png);
+    background-size: 100%;
+    background-position: center;
     color: $primary-clr;
     display: flex;
     justify-content: center;
@@ -136,11 +138,30 @@
     .skill-set {
         .content-wrapper {
             display: flex;
-            gap: $spacer * 0.8;
+            gap: $spacer;
             flex-wrap: wrap;
             justify-content: space-between;
             .group-skill {
                 flex: 1 1 48%;
+                h2 {
+                    margin-bottom: $spacer;
+                    display: block;
+                    font-family: $ff-1;
+                    &::after {
+                        content: '';
+                        position: relative;
+                        display: block;
+                        width: 70px;
+                        height: 1px;
+                        background-color: $dark-clr;
+                        left: 2px;
+                        top: 0.3em;
+                    }
+                    @media (min-width: $tablet-width) {
+                        display: none;
+                    }
+                }
+
                 .skill {
                     display: flex;
                     gap: $spacer / 2;
