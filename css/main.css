@@ -795,7 +795,7 @@ header nav ul a::before {
   position: absolute;
   left: 0;
   bottom: -6px;
-  width: 100%;
+  width: 40%;
   height: 1px;
   background-color: #fff;
   -webkit-transform-origin: left;
