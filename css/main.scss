@@ -64,6 +64,22 @@ header {
             justify-content: space-between;
             a {
                 display: inline-block;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0; bottom: -6px;
+                    width: 100%; height: 1px;
+                    background-color: $primary-clr;
+                    transform-origin: left;
+                    transition: transform $dur/2  $easeInOut;
+                    transform: scaleX(0);
+                }
+                &:hover {
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
         span {
@@ -124,6 +140,7 @@ footer.main-footer {
     letter-spacing: .2em;
     word-break: none;
     border: 1px solid $dark-clr;
+    position: relative;
     transition: color $dur $easeInOut;
 }
 .cta-darken {
