@@ -1051,6 +1051,10 @@ footer.main-footer .social-vertical {
 #hero-section {
   position: relative;
   overflow: hidden;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: right;
+          perspective-origin: right;
 }
 
 #hero-section .rect, #hero-section .bg-img, #hero-section .bg-word {
@@ -1157,6 +1161,10 @@ footer.main-footer .social-vertical {
 #showcase {
   position: relative;
   padding-top: 20%;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: right;
+          perspective-origin: right;
 }
 
 #showcase .img {
@@ -1227,6 +1235,10 @@ footer.main-footer .social-vertical {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: right;
+          perspective-origin: right;
 }
 
 #about .wrapper .rect {
@@ -1380,6 +1392,10 @@ footer.main-footer .social-vertical {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 45%;
           flex: 1 1 45%;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: right;
+          perspective-origin: right;
 }
 
 #contact .content .social .img {
@@ -1474,6 +1490,8 @@ footer.main-footer .social-vertical {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    -webkit-perspective-origin: center;
+            perspective-origin: center;
   }
   #about .wrapper .content {
     padding: unset;

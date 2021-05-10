@@ -211,7 +211,7 @@
 
 			setTimeout(function(){
 				_self.addEvents();
-			}, 1000);
+			}, 1200);
 		};
 
 		this.animateScroll = function () {
@@ -282,11 +282,10 @@
 					duration: 0.7
 				})
 				.fromTo(bgImg[0], {
-					transformOrigin: 'right',
-					scale: 0.8,
+					z: -60,
 					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
 				}, {
-					scale: 1,
+					z: 0,
 					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
 					duration: 0.7
 				}, '-=0.7')
@@ -319,11 +318,10 @@
 
 			} else if (position == 1) {
 				pt.fromTo(img[0], {
-					transformOrigin: 'right',
-					scale: 0.8,
+					z: -60,
 					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
 				}, {
-					scale: 1,
+					z: 0,
 					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
 					duration: 0.7
 				})
@@ -343,11 +341,10 @@
 
 			} else if (position == 2) {
 				pt.fromTo(img[1], {
-					transformOrigin: 'right',
-					scale: 0.8,
+					z: -60,
 					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
 				}, {
-					scale: 1,
+					z: 0,
 					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
 					duration: 0.7
 				})
@@ -367,11 +364,10 @@
 
 			} else if (position == 3) {
 				pt.fromTo(bounding[2].children[1].children[0], {
-					transformOrigin: 'right',
-					scale: 0.8,
+					z: -60,
 					clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"
 				}, {
-					scale: 1,
+					z: 0,
 					clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
 					duration: 0.7
 				})
